@@ -1,0 +1,499 @@
+<resources>
+    <string name="app_name">KotlinLearn</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_first_boot">FirstBootActivity</string>
+    <string name="title_activity_start_up">StartUpActivity</string>
+    - <string name="click_skip">
+  <u>点击跳过</u>
+  </string>
+    <string name="phone_num">4009090900</string>
+    <string name="filter_num_en_text">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="common_placeholder_number" />
+    <string name="common_placeholder_money" />
+    <string name="common_placeholder_string" />
+    <string name="common_placeholder_date" />
+    <string name="common_placeholder_rate" />
+    - <!-- 主页tab
+  -->
+    <string name="main_tab_home">首页</string>
+    <string name="main_tab_finance">项目</string>
+    <string name="main_tab_my">我的</string>
+    - <!-- 输入框提示
+  -->
+    <string name="edit_hint_input_verify_code">请输入您的验证码</string>
+    - <!-- 首页
+  -->
+    <string name="home_uoozi">1分钟了解京贷金服</string>
+    - <!-- 理财
+  -->
+    <string name="finance_account_balance">账户余额(元)</string>
+    <string name="finance_yestoday_earn">昨日收入 (元)</string>
+    <string name="finance_top_up">充值</string>
+    <string name="finance_create_deposit">开通</string>
+    <string name="finance_login">登录</string>
+    <string name="finance_tips_top_up">请您先充值</string>
+    <string name="finance_tips_create_deposit">请您先开通资金存管</string>
+    <string name="finance_invest_days">投资期限</string>
+    <string name="finance_per_ten_thousand_earn">每万元收入</string>
+    <string name="finance_pre_year_earn_rate">协议借款年化利率</string>
+    - <!-- 邀请
+  -->
+    <string name="invite_friends_title">邀请好友</string>
+    <string name="invite_history_title">邀请记录</string>
+    <string name="invite_phone_text">手机号邀请</string>
+    <string name="invite_share_text">分享邀请</string>
+    <string name="invite_send">发送邀请</string>
+    - <!-- 资讯
+  -->
+    <string name="news_title">京贷资讯</string>
+    - <!-- 第三方分享、登录
+  -->
+    <string name="wechat">微信好友</string>
+    <string name="wechat_circle">朋友圈</string>
+    <string name="weibo">新浪微博</string>
+    <string name="qq">QQ好友</string>
+    <string name="qzone">QQ空间</string>
+    - <!-- home toolbar cls
+  -->
+    <string name="cls_scan">扫码</string>
+    <string name="cls_money_tree">摇钱树</string>
+    <string name="cls_invite">邀请</string>
+    <string name="cls_sign">签到</string>
+    <string name="cls_all">全部</string>
+    - <!-- 我的
+  -->
+    <string name="my_account">账户概况</string>
+    <string name="my_welfare">我的福利</string>
+    <string name="my_uoozi">了解悠哉</string>
+    <string name="my_detail">查看详情》</string>
+    <string name="my_setting">系统设置</string>
+    <string name="my_all_money">总资产(元)</string>
+    <string name="my_all_moneys">总资产(元)</string>
+    <string name="my_balance">账户余额(元)</string>
+    <string name="my_yesterday">昨日收入(元)</string>
+    <string name="my_cumulative">累计收入(元)</string>
+    <string name="consultation">在线咨询</string>
+    <string name="withdrawals">提现</string>
+    <string name="recharge">充值</string>
+    <string name="hotline">联系客服</string>
+    <string name="in_time">每天 09:00 - 18:00</string>
+    <string name="problem">在线任何问题请呼叫</string>
+    <string name="my_no_top_up_tips">您尚未开通存管,请开通存管后再充值</string>
+    <string name="my_no_withdraw_tips">您尚未开通存管,请开通存管后再提现</string>
+    <string name="my_no_withdraw">请先开通存管</string>
+    <string name="my_dialog_no_account_title">提示</string>
+    - <!-- 充值
+  -->
+    <string name="title_top_up">充值</string>
+    <string name="title_top_up_withdraw_agreement">充值提现服务协议</string>
+    <string name="top_up_top_up_amount">充值金额</string>
+    <string name="btn_next_step">下一步</string>
+    <string name="top_up_withdraw_agreement">《充值提现服务协议》</string>
+    <string name="top_up_prefix_limit_every_time">单笔:%1s万</string>
+    <string name="top_up_prefix_limit_every_day">单日:%1s万</string>
+    <string name="top_up_limit_hint">充值金额每笔100元起</string>
+    <string name="withdraw_limit_hint">提现金额每笔100元起</string>
+    - <!-- 提现
+  -->
+    <string name="title_withdraw">提现</string>
+    <string name="title_free_withdraw">免费提现</string>
+    <string name="withdraw_tips">注: 提现金额只能提到存管账户关联银行卡中</string>
+    <string name="withdraw_tips_balance_not_enough">您的提现金额超过账户余额,请重新输入</string>
+    - <!-- 收入
+  -->
+    <string name="title_total_earn">累计总收入</string>
+    <string name="total_earn_no_cash">未兑付收入</string>
+    <string name="total_earn_cashed">已兑付收入</string>
+    <string name="total_earn_red_package">红包收入</string>
+    <string name="total_earn_vip_back">vip返现</string>
+    <string name="total_earn_activity_back">活动返现</string>
+    <string name="total_earn_free_withdraw_num">免费提现次数</string>
+    <string name="title_earn_category_list">收入明细</string>
+    <string name="earn_detail_total_month_earn">月总收入(元)</string>
+    <string name="earn_detail_dialog_title">提示</string>
+    <string name="earn_detail_dialog_message">尊敬的用户，您本月尚未进行投资</string>
+    - <!-- 资产
+  -->
+    <string name="title_asset_category_list">资产明细</string>
+    <string name="title_asset_detail">资产详情</string>
+    <string name="asset_bought">已购资产</string>
+    <string name="asset_trade_history">交易记录</string>
+    <string name="asset_topup_withdraw">充值提现</string>
+    <string name="asset_filter_all">全部</string>
+    <string name="asset_filter_no_expire">未到期</string>
+    <string name="asset_filter_cashing">兑付中</string>
+    <string name="asset_filter_cashed">已兑付</string>
+    <string name="asset_filter_trade_success">交易成功</string>
+    <string name="asset_filter_trade_fail">交易失败</string>
+    <string name="asset_filter_withdraw">提现</string>
+    <string name="asset_filter_top_up">充值</string>
+    <string name="free_withdraw_increase">免提+1</string>
+    <string name="free_withdraw_reduce">免提-1</string>
+    - <!-- 资产详情
+  -->
+    <string name="asset_detail_invest_principal">投资本金</string>
+    <string name="asset_detail_cash_principal">兑付本金</string>
+    <string name="asset_detail_year_earn">约定年化利率</string>
+    <string name="asset_detail_expire_date">到期时间</string>
+    <string name="asset_detail_earn">投资收入</string>
+    <string name="asset_detail_red_packet_withdraw">红包提现</string>
+    <string name="asset_detail_join_activity">参与活动</string>
+    <string name="asset_detail_activity_award">活动奖励</string>
+    <string name="asset_detail_business_serial_num">业务流水号</string>
+    <string name="asset_detail_buy_agreement">借款协议(E签宝存证)</string>
+    <string name="asset_detail_click_look">点击查看</string>
+    <string name="asset_detail_click_sign">签署协议</string>
+    <string name="asset_detail_cashed_tips">已兑付资产将直接打入您的支付银行卡中,如有问题请致电客服.</string>
+    - <!-- 消息公告
+  -->
+    <string name="notice_title">消息中心</string>
+    - <!-- 用户协议
+  -->
+    <string name="title_user_agreement">用户协议</string>
+    - <!-- 充值或提现结果页
+  -->
+    <string name="withdraw_amonut">提现金额</string>
+    <string name="withdraw_time">提现时间</string>
+    <string name="withdraw_service_fee">提现手续费</string>
+    <string name="top_up_amount">充值金额</string>
+    <string name="top_up_time">充值时间</string>
+    <string name="withdraw_order_id">业务流水号</string>
+    <string name="withdraw_status_processing">提现处理中</string>
+    <string name="withdraw_status_uncommit">提现未提交</string>
+    <string name="withdraw_status_success">提现成功</string>
+    <string name="withdraw_status_fail">提现失败</string>
+    <string name="top_up_status_processing">充值处理中</string>
+    <string name="top_up_status_success">充值成功</string>
+    <string name="top_up_status_fail">充值失败</string>
+    <string name="top_up_status_uncommit">充值未提交</string>
+    <string name="top_up_withdraw_result_bank_card">银行卡</string>
+    <string name="result_tips_top_up_success">\u3000\u3000充值成功后就可以开始购买理财了,切记如果充值金额未购买理财提现会产生手续费呦.</string>
+    <string name="result_tips_top_up_processing">\u3000\u3000支付公司会于24小时内为您处理，请您耐心等候处理结果.</string>
+    <string name="result_tips_top_up_fail">\u3000\u3000请用户立即确认交易失败已经扣款,如发生失败扣款情况请立刻致电:%1s与客服联系,这是第三方支付渠道偶然发生的问题,请您放心我们会在最短时间内完成失败退款,您无需担心(致电请提供业务流水号).</string>
+    <string name="result_tips_withdraw_success">\u3000\u3000余额提现会在24小时内完成用户目录银行卡支付,如发生失败扣款情况请立刻致电:%1s与客服联系,这是第三方支付渠道偶然发生的问题,请您放心我们会在最短时间内完成失败退款,您无需担心(致电请提供业务流水号).</string>
+    <string name="result_tips_withdraw_fail">\u3000\u3000余额提现会在24小时内完成用户目录银行卡支付,如发生失败扣款情况请立刻致电:%1s与客服联系,这是第三方支付渠道偶然发生的问题,请您放心我们会在最短时间内完成失败退款,您无需担心(致电请提供业务流水号).</string>
+    - <!-- 设置
+  -->
+    <string name="title_settings">系统设置</string>
+    <string name="settings_manage_card">银行卡管理</string>
+    <string name="settings_change_psw">密码管理</string>
+    <string name="settings_address">地址管理</string>
+    <string name="settings_manage_fingerprint">指纹管理</string>
+    <string name="settings_manage_account">账号管理</string>
+    <string name="settings_risk_evaluation">风险评估</string>
+    <string name="settings_feedback">意见反馈</string>
+    <string name="settings_about">关于京贷金服</string>
+    - <!-- dialog
+  -->
+    <string name="dialog_title_select_card">选择银行卡</string>
+    <string name="dialog_title_pay">请输入支付密码</string>
+    <string name="dialog_common_cancel">取消</string>
+    <string name="dialog_common_ok">确定</string>
+    <string name="dialog_auto_sign_ok">自动签署</string>
+    <string name="dialog_auto_sign_title">该协议已生效请确认是否默认使用此签名</string>
+    - <!-- 前后缀
+  -->
+    <string name="prefix_finance_list_days">定期%1s天</string>
+    <string name="prefix_money_unit">￥%1s</string>
+    <string name="prefix_bank_card">银行卡 %1s</string>
+    <string name="prefix_withdraw_amount">提现金额%1s元</string>
+    <string name="prefix_top_up_amount">充值金额%1s元</string>
+    <string name="prefix_resend">重新发送 (%1s)</string>
+    <string name="prefix_red_package_withdraw_info">共%1$s元</string>
+    <string name="prefix_pre_save_phone">预留手机%1$s</string>
+    <string name="prefix_asset_detail_date_sweep">%1$s至%2$s 共%3$s天</string>
+    <string name="prefix_free_withdraw_times">免费提现次数</string>
+    <string name="prefix_vip_back_rate">VIP返现%1s%%</string>
+    <string name="suffix_money">%1s元</string>
+    <string name="suffix_moneys">实际到账(元) %1s</string>
+    <string name="suffix_earn_rate">%1s%%</string>
+    <string name="suffix_free_withdraw_num">%1s次</string>
+    - <!-- 购买理财页面
+  -->
+    <string name="finance_buy_money">购买金额</string>
+    <string name="finance_back_time">回款时间</string>
+    <string name="finance_user_balance">账户余额</string>
+    <string name="finance_finance_profit">项目利息</string>
+    <string name="finance_vip_profit">VIP返现</string>
+    <string name="finance_rp_profit">红包收入</string>
+    <string name="finance_all_profit">总收入</string>
+    <string name="finance_agreement">我已阅读并同意《借款协议》</string>
+    <string name="finance_need">还需充值并支付</string>
+    - <!-- 购买理财结果页面
+  -->
+    <string name="trans_detail_title">交易详情</string>
+    <string name="trans_detail_capital">本金</string>
+    <string name="trans_detail_time">购买时间</string>
+    <string name="trans_detail_total_earn">总收入</string>
+    <string name="trans_detail_order_id">业务流水号</string>
+    <string name="trans_detail_buy_succed">（交易成功）</string>
+    <string name="trans_detail_buy_fail">（交易失败）</string>
+    <string name="trans_detail_sign_agreement">签署协议</string>
+    <string name="trans_detail_btn_complete">返回</string>
+    <string name="trans_detail_success_info">\u3000\u3000本次交易成功,本平台通过丰付网融管家存管保障您的账户资金安全,请您放心投资,如有疑问请致电客服:%1s.</string>
+    <string name="trans_detail_fail_info">\u3000\u3000请用户立即确认交易失败已经扣款,如发生失败扣款情况请立刻致电:%1s与客服联系,这是第三方支付渠道偶然发生的问题,请您放心我们会在最短时间内完成失败退款,您无需担心(致电请提供业务流水号).</string>
+    - <!-- 标地详情
+  -->
+    <string name="finance_the_year">预计年利率</string>
+    <string name="finance_investment_date">期限(天)</string>
+    <string name="finance_to_buy">可购份额</string>
+    <string name="finance_vip">VIP返现(年化)</string>
+    <string name="finance_pople">已购人数</string>
+    <string name="finance_tab_1">到期还款:本金+利息</string>
+    <string name="finance_tab_2">T+2还款</string>
+    <string name="finance_tab_3">当日计息</string>
+    <string name="finance_up">继续上拉查看详情</string>
+    <string name="finance_product_form">产品形式</string>
+    <string name="finance_law">法律意见</string>
+    <string name="finance_guarantee">担保措施</string>
+    <string name="finance_guarantee_prove">担保机构</string>
+    <string name="finance_publisher">发行商</string>
+    <string name="finance_deadline">募集截止日期</string>
+    <string name="finance_usage">借款用途</string>
+    <string name="finance_nvestment_agreement">借款协议</string>
+    <string name="finance_project_info">项目信息</string>
+    <string name="finance_license">营业执照</string>
+    <string name="finance_legal">法人信息</string>
+    <string name="finance_platform_agreement">居间协议</string>
+    <string name="finance_org_agreement">企业披露</string>
+    <string name="finance_available_balance">可用余额(元)</string>
+    <string name="finance_immediately">立即投资</string>
+    <string name="finance_notice">借贷有风险 出借需谨慎\n丰付支付存管 全程不触碰用户资金 不泄露用户信息</string>
+    <string name="finance_detail_calculate_pre_earn">预计收入(元)</string>
+    <string name="finance_detail_calculate_finance_earn">理财收入</string>
+    <string name="finance_detail_calculate_red_packet_earn">红包收入</string>
+    <string name="finance_detail_calculate_vip_back">VIP返现</string>
+    <string name="finance_detail_electronic_contract">电子合同</string>
+    <string name="finance_detail_electronic_contract_info">e签宝</string>
+    <string name="finance_detail_depository">资金存管</string>
+    <string name="finance_detail_depository_info">丰付支付网融管家</string>
+    - <!-- 总资产
+  -->
+    <string name="total_title">总资产</string>
+    <string name="total_principal">未兑付本金</string>
+    <string name="total_profit">未兑付收入</string>
+    <string name="total_balance">账户余额</string>
+    - <!-- 理财详情账户充值
+  -->
+    <string name="finance_title_top_up">账户充值</string>
+    <string name="finance_top_up_card">充值银行卡</string>
+    <string name="finance_hint_code">请输入验证码</string>
+    - <!-- 银行卡管理
+  -->
+    <string name="setting_bank_card">银行卡管理</string>
+    <string name="setting_card_unbunding">解绑</string>
+    <string name="setting_card_unbunding_ok">确定解除？</string>
+    - <!-- 修改交易密码
+  -->
+    <string name="set_pw_title">修改交易密码</string>
+    <string name="set_pw_phone">绑定手机号</string>
+    <string name="set_pw_phone_h">请输入手机号</string>
+    <string name="set_pw_vcode">动态验证码</string>
+    <string name="set_pw_vcode_h">请输入验证码</string>
+    <string name="set_pw_new_pw">设置新密码</string>
+    <string name="set_pw_new_pw_h">请设置密码</string>
+    <string name="set_pw_agin_pw">确认新密码</string>
+    <string name="set_pw_agin_pw_h">确认密码</string>
+    <string name="set_pw_complete">确认修改</string>
+    - <!-- 指纹管理
+  -->
+    <string name="set_finger_title">指纹管理</string>
+    <string name="set_finger_switch">指纹开关</string>
+    <string name="set_finger_info">验证指纹\n验证后可操作开关</string>
+    <string name="set_finger_cancel">取消</string>
+    - <!-- 账号管理
+  -->
+    <string name="set_account_title">账号管理</string>
+    <string name="set_account_unbunding">解绑</string>
+    <string name="manage_account_wechat">微信账户</string>
+    <string name="manage_account_weibo">微博账户</string>
+    <string name="manage_account_tips_bind_third_party">绑定第三方账号</string>
+    <string name="manage_account_tips_bind_cancel">您已取消绑定第三方账号</string>
+    <string name="manage_account_unbind_wechat_title">解绑后将不能使用微信快捷登录</string>
+    <string name="manage_account_unbind_weibo_title">解绑后将不能使用微博快捷登录</string>
+    <string name="manage_account_unbind_content">确定解绑?</string>
+    <string name="manage_account_unbind_cancel">取消</string>
+    <string name="manage_account_unbind_ok">确定</string>
+    - <!-- 指纹登录
+  -->
+    <string name="finger_click">点击进行指纹解锁</string>
+    <string name="finger_sms">短信登录</string>
+    <string name="finger_in_app">直接进入APP</string>
+    <string name="finger_dialog_content_one">您已开启指纹验证</string>
+    <string name="finger_dialog_content_two">通过指纹键验证已有手机指纹</string>
+    <string name="finger_dialog_cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="toast_exit_app">再按一次退出京贷金服</string>
+    <string name="toast_verify_code_error">验证码输入错误</string>
+    <string name="toast_not_be_invite_share">请先开通存管后再邀请好友,否则您的红包奖励将无法发放</string>
+    - <!-- 登录页面
+  -->
+    <string name="login_skip">跳过</string>
+    <string name="login_re_info">未注册用户短信验证后自动创建账号</string>
+    <string name="login_re_info_pw">新用户短信登录后创建账号</string>
+    <string name="login_login">登录</string>
+    <string name="login_pass_word">账号密码登录</string>
+    <string name="login_sms">短信登录</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_other_login">其他方式登录</string>
+    <string name="login_wechar">微信</string>
+    <string name="login_weibo">微博</string>
+    <string name="login_finger">指纹</string>
+    - <!-- 设置登录密码页面
+  -->
+    <string name="login_pw_title">忘记密码</string>
+    <string name="login_setting_pw_title">修改登录密码</string>
+    <string name="login_set_pw">请设置密码</string>
+    <string name="login_set_pw_hint">请输入6~16位数字、字母或组合</string>
+    <string name="login_set_agin_pw">请再次输入</string>
+    <string name="login_set_agin_pw_hint">请再次输入密码</string>
+    <string name="login_bt_txt">完成并登录</string>
+    <string name="login_forgot">忘记密码</string>
+    <string name="login_pw_set">立即修改</string>
+    <string name="login_pw_bind">立即绑定</string>
+    <string name="login_bind_account">绑定账号</string>
+    <string name="login_bind_account_info">为了您的账号安全,请绑定手机号</string>
+    - <!-- 开通存管
+  -->
+    <string name="depository_title">开通存管</string>
+    <string name="depository_name">真实姓名</string>
+    <string name="depository_name_hint">请输入姓名</string>
+    <string name="depository_user_card">身份证号</string>
+    <string name="depository_user_card_hint">请输入身份证号</string>
+    <string name="depository_bank_card">银行卡号</string>
+    <string name="depository_bank_card_hint">请输入银行卡号</string>
+    <string name="depository_tel">预留手机号</string>
+    <string name="depository_tel_hint">请输入手机号</string>
+    <string name="depository_code">输入验证码</string>
+    <string name="depository_code_hint">请输入验证码</string>
+    <string name="depository_info">我已阅读并同意《存管协议》</string>
+    <string name="depository_complete">开通</string>
+    - <!-- 设置交易密码
+  -->
+    <string name="setting_pw_title">密码管理</string>
+    <string name="setting_pw_login">登录密码</string>
+    <string name="setting_pw_trader">交易密码</string>
+    <string name="setting_pw_vcode_title">手机验证</string>
+    <string name="setting_pw_vcode_btn">确认修改</string>
+    <string name="setting_pw_trader_hint">请输入6位数字密码</string>
+    <string name="setting_pw_trader_agin_hint">请请再次输密码</string>
+    <string name="setting_pw_btn_compont">请请再次输密码</string>
+    <string name="settrader_title">设置交易密码</string>
+    <string name="settrader_pw">输入密码</string>
+    <string name="settrader_pw_hint">请输入新密码</string>
+    <string name="settrader_again_pw">再次输入</string>
+    <string name="settrader_again_pw_hint">请再次输入</string>
+    <string name="settrader_info">我已阅读并同意《交易密码托管》</string>
+    <string name="settrader_complete">完成</string>
+    <string name="settrader_complete_pw">确认修改</string>
+    - <!-- 我的红包
+  -->
+    <string name="title_my_red_packet">我的红包</string>
+    <string name="my_red_packet_desc">红包说明</string>
+    <string name="my_red_packet_tab_no_used">未使用</string>
+    <string name="my_red_packet_tab_used">已使用</string>
+    <string name="my_red_packet_tab_expired">已过期</string>
+    <string name="my_red_packet_invest_days">投资期限</string>
+    <string name="my_red_packet_invest_min_money">单笔投资</string>
+    <string name="my_red_packet_immediate_use">立即使用</string>
+    <string name="my_red_packet_dialog_title">该红包需投资%1s天以上的标的才可使用哦</string>
+    <string name="my_red_packet_dialog_ok">去投资</string>
+    - <!-- 地址管理
+  -->
+    <string name="title_manage_address">地址管理</string>
+    <string name="manage_address_add">+ 新增</string>
+    <string name="manage_address_edit">编辑</string>
+    <string name="manage_address_delete">删除</string>
+    <string name="manage_address_to_bo_default">设为默认</string>
+    - <!-- 新增地址
+  -->
+    <string name="title_add_address">新增地址</string>
+    <string name="title_edit_address">编辑地址</string>
+    <string name="add_address_receiver">收货人</string>
+    <string name="add_address_hint_input_name">请输入联系人</string>
+    <string name="add_address_phone">联系方式</string>
+    <string name="add_address_hint_inpu_phone">请输入联系方式</string>
+    <string name="add_address_area">所在地区</string>
+    <string name="add_address_hint_address_detail">请填写详细地址</string>
+    <string name="add_address_hint_select">请选择</string>
+    <string name="add_address_save">保存</string>
+    <string name="add_address_tips_phone_err">手机号格式不正确</string>
+    - <!-- 借款协议
+  -->
+    <string name="loan_agreement_title">签署协议</string>
+    <string name="singer_agreement_title">签署协议</string>
+    <string name="singer_agreement_prompt">请在红框区域内输入签名</string>
+    <string name="singer_agreement_agin">清空重签</string>
+    <string name="singer_agreement_up">提 交</string>
+    <string name="singer_agreement_back">返 回 合 同 页 面</string>
+    <string name="singer_agreement_yes">确 认 签 名</string>
+    <string name="singer_agreement_agins">重 新 签 署</string>
+    <string name="loan_agreement_click">点 击 签 署</string>
+    - <!-- 风险评估
+  -->
+    <string name="venture_evaluation_title">风险评估</string>
+    <string name="venture_evaluation_dialog_again">重新评估</string>
+    <string name="venture_evaluation_dialog_ok">我知道了</string>
+    <string name="venture_evaluation_radicalness">对风险有非常高的承受能力,资产配置以高风险投资品种为主,追求在较短周期内的利益最大化.</string>
+    <string name="venture_evaluation_aggressive">偏向于激进的资产配置,对风险有较高的承受能力,投资利益预期相对较高.</string>
+    <string name="venture_evaluation_balance">风险承受能力适中,偏向于资产的均衡配置,能够承受一定的投资风险.</string>
+    <string name="venture_evaluation_stable">风险承受能力较低，在考虑安全性的同时,对协议年化利率和流动性都有一定要求.</string>
+    <string name="venture_evaluation_exit_dialog_title">本次风险评估还未完成!</string>
+    <string name="venture_evaluation_exit_dialog_content">确定退出?</string>
+    <string name="venture_evaluation_exit_dialog_exit">退出</string>
+    <string name="venture_evaluation_exit_dialog_continue">继续评估</string>
+    - <!-- 弹框提示
+  -->
+    <string name="toast_tel_num_no">手机号格式不正确</string>
+    <string name="toast_pass_word_again_no">两次密码输入不一致,请重新输入</string>
+    <string name="toast_cancel_other_login">您已取消使用三方账号登录</string>
+    <string name="toast_finger_error">指纹验证失败,请重试</string>
+    <string name="toast_cancel_finger_login">已取消指纹登录操作</string>
+    <string name="toast_finager_no_money">您的账户余额不足!</string>
+    <string name="toast_all_money_no_cg">您尚未开通存管,请开通存管后再查看</string>
+    <string name="toast_no_sign">您尚未手写签名,请手写后再提交</string>
+    - <!-- 提示语
+  -->
+    <string name="tips_h5_loading">页面跳转中，请稍后…</string>
+    - <!-- h5标题
+  -->
+    <string name="h5_title_uoozi_news">京贷资讯</string>
+    <string name="h5_title_msg_detail">消息详情</string>
+    <string name="h5_title_know_uoozi">了解京贷金服</string>
+    <string name="h5_title_money_tree">摇钱树</string>
+    <string name="h5_title_money_tree_intro">摇钱树说明</string>
+    <string name="h5_title_share">邀请</string>
+    <string name="h5_title_invite">邀请</string>
+    <string name="h5_title_invite_award">邀请奖励</string>
+    <string name="h5_title_vip_center">会员中心</string>
+    <string name="h5_title_wealth_details">我的财富值</string>
+    <string name="h5_title_wealth_intro">财富值说明</string>
+    <string name="h5_title_risk_evaluation">风险评估</string>
+    <string name="h5_title_gift">我的礼品</string>
+    <string name="h5_title_gift_detail">礼品详情</string>
+    <string name="setting_about_context">悠哉享 / 轻松赚</string>
+    <string name="setting_about_cn">京贷投资(北京)有限公司</string>
+    <string name="setting_about_us">\@2018 JINGDAI intestment(Beijing) Co.,Ltd.</string>
+    - <!-- 回款计划
+  -->
+    <string name="pay_ment_title">回款计划</string>
+    - <!-- 变更银行卡
+  -->
+    <string name="chenge_bank_title">变更银行卡</string>
+    <string name="chenge_bank_name">姓名\u3000\u3000</string>
+    <string name="chenge_bank_name_hint">请输入姓名</string>
+    <string name="chenge_bank_user_card">身份证\u3000</string>
+    <string name="chenge_bank_user_card_hint">请输入身份证号</string>
+    <string name="chenge_bank_tel">手机号\u3000</string>
+    <string name="chenge_bank_tel_hint">请输入银行卡预留手机号</string>
+    <string name="chenge_bank_reason">变更原因</string>
+    <string name="chenge_bank_reason_hint">请填写变更原因</string>
+    <string name="chenge_bank_confirm">确认变更</string>
+    <string name="chenge_bank_info_0">注:审核通过后您将重新填写银行卡信息</string>
+    <string name="chenge_bank_info_1">您的申请已提交成功,请耐心等地审核结果!</string>
+    <string name="chenge_bank_info_2">注意:您提交的申请将在24小时内为您审核,审核期间该页面不能重复提交,请谅解.</string>
+    - <!--  TODO: Remove or change this placeholder text
+  -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
