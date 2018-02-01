@@ -69,7 +69,7 @@ public class ThreeRecyclerViewActivity extends AppCompatActivity {
         for (int i = 0; i < level1; i++) {
             Level1Item vLevel1Item = new Level1Item("Level1的第" + (i+1) + "个条目", "subTitle of" + i);
             for (int j = 0; j < level2; j++) {
-                Level2Item vLevel2Item = new Level2Item("level2的第" + j + "个条目", "(没有动画)");
+                Level2Item vLevel2Item = new Level2Item("   level2的第" + j + "个条目", "(没有动画)");
                 for (int k = 0; k < level3; k++) {
                     vLevel2Item.addSubItem(new Level3Item(name[k], vRandom.nextInt(40)));
                 }
