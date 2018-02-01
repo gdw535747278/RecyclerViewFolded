@@ -10,13 +10,11 @@ import com.example.bindviewtool.BindViewUtility;
 import com.example.tcl.customview.text01.Constants;
 import com.example.tcl.customview.text01.Level1Item;
 import com.example.tcl.customview.text01.Level2Item;
-import com.example.tcl.customview.text01.Level3Item;
 import com.example.tcl.customview.text01.MultiItemType;
 import com.example.tcl.customview.text01.MyRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class ThreeRecyclerViewActivity extends AppCompatActivity {
 
@@ -58,7 +56,7 @@ public class ThreeRecyclerViewActivity extends AppCompatActivity {
     }
 
     private List<MultiItemType> initData() {
-        int level1 = 9;
+        /*int level1 = 9;
         int level2 = 3;
         int level3 = 5;
 
@@ -76,8 +74,27 @@ public class ThreeRecyclerViewActivity extends AppCompatActivity {
                 vLevel1Item.addSubItem(vLevel2Item);
             }
             vList.add(vLevel1Item);
-        }
+        }*/
+        List<MultiItemType> vList = initFirstDay();
+        return vList;
+    }
 
+    private List<MultiItemType> initFirstDay() {
+        ArrayList<MultiItemType> vList = new ArrayList<>();
+        Level1Item vLevel1Item = new Level1Item("Android四大组件", "subTitle of");
+
+        Level2Item vLevel2Item1 = new Level2Item("Activity", "");
+        vLevel1Item.addSubItem(vLevel2Item1);
+
+        Level2Item vLevel2Item2 = new Level2Item("Service(服务)", "");
+        vLevel1Item.addSubItem(vLevel2Item2);
+
+        Level2Item vLevel2Item3 = new Level2Item("Content Provider(内容提供者)", "");
+        vLevel1Item.addSubItem(vLevel2Item3);
+
+        Level2Item vLevel2Item4 = new Level2Item("Broadcast Receiver(广播接受者)", "");
+        vLevel1Item.addSubItem(vLevel2Item4);
+        vList.add(vLevel1Item);
         return vList;
     }
 }
