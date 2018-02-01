@@ -50,14 +50,16 @@ public class MyRecyclerViewAdapter extends BaseRecyclerViewAdapter<MultiItemType
             case Constants.TYPE_LEVEL_1:
                 final Level1Item vLevel1Item = (Level1Item) item;
                 pHolder.mTextView.setText(vLevel1Item.title);
+                pHolder.mImageView.setImageResource(vLevel1Item.isExpanded()?R.mipmap.arrow_b:R.mipmap.arrow_r);
                 pHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         int vPosition = pHolder.getAdapterPosition();
                         if (vLevel1Item.isExpanded()) {
-                            collapse(vPosition);
+                            collapse(vPosition,true);
                         } else {
-                            expand(vPosition);
+                            expand(vPosition,true);
+
                         }
                     }
                 });
@@ -65,14 +67,15 @@ public class MyRecyclerViewAdapter extends BaseRecyclerViewAdapter<MultiItemType
             case Constants.TYPE_LEVEL_2:
                 final Level2Item vLevel2Item = (Level2Item) item;
                 pHolder.mTextView.setText(vLevel2Item.mTitle);
+                pHolder.mImageView.setImageResource(vLevel2Item.isExpanded()?R.mipmap.arrow_b:R.mipmap.arrow_r);
                 pHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         int vPosition = pHolder.getAdapterPosition();
                         if (vLevel2Item.isExpanded()) {
-                            collapse(vPosition);
+                            collapse(vPosition,false);
                         } else {
-                            expand(vPosition);
+                            expand(vPosition,false);
                         }
                     }
                 });
