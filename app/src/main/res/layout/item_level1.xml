@@ -9,6 +9,7 @@
         android:layout_weight="1"
         android:id="@+id/tv_2"
         android:text="二级条目"
+        android:layout_marginLeft="50dp"
         android:textSize="12dp"
         android:gravity="center_horizontal"
         android:layout_height="50dp"/>

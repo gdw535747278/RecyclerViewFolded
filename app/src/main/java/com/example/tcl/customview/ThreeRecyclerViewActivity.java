@@ -1,7 +1,7 @@
 package com.example.tcl.customview;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -10,20 +10,23 @@ import com.example.bindviewtool.BindViewUtility;
 import com.example.tcl.customview.text01.Constants;
 import com.example.tcl.customview.text01.Level1Item;
 import com.example.tcl.customview.text01.Level2Item;
+import com.example.tcl.customview.text01.Level3Item;
 import com.example.tcl.customview.text01.MultiItemType;
 import com.example.tcl.customview.text01.MyRecyclerViewAdapter;
+import com.example.tcl.customview.util.AppUtils;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class ThreeRecyclerViewActivity extends AppCompatActivity {
+public class ThreeRecyclerViewActivity extends BaseActivity {
 
     private String TAG = "ThreeRecyclerViewActivity";
+    public ArrayList<MultiItemType> mList;
+    public ActionBar mActionBar;
 
     @BindView(R.id.rv)
     RecyclerView mRecyclerView;
 
-    public List<MultiItemType> mList;
+//    public List<MultiItemType> mList;
     public MyRecyclerViewAdapter mAdapter;
 
     @Override
@@ -32,11 +35,15 @@ public class ThreeRecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three_recycler_view);
         BindViewUtility.bind(this);
-//        mRecyclerView = findViewById(R.id.rv);
-        setTitle("多级item");
-        mList = initData();
+        initActionBar();
+        initData();
 
         initView();
+
+    }
+
+    private void initActionBar() {
+        mActionBar = getSupportActionBar();
 
     }
 
@@ -55,46 +62,35 @@ public class ThreeRecyclerViewActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    private List<MultiItemType> initData() {
-        /*int level1 = 9;
-        int level2 = 3;
-        int level3 = 5;
+    private void initData() {
 
-        String[] name = {"Bob", "Andy", "Lily", "Brown", "Bruce"};
-        Random vRandom = new Random();
-        ArrayList<MultiItemType> vList = new ArrayList<>();
+        mList = new ArrayList<>();
+        initFirstDay();
 
-        for (int i = 0; i < level1; i++) {
-            Level1Item vLevel1Item = new Level1Item("Level1的第" + (i+1) + "个条目", "subTitle of" + i);
-            for (int j = 0; j < level2; j++) {
-                Level2Item vLevel2Item = new Level2Item("   level2的第" + j + "个条目", "(没有动画)");
-                for (int k = 0; k < level3; k++) {
-                    vLevel2Item.addSubItem(new Level3Item(name[k], vRandom.nextInt(40)));
-                }
-                vLevel1Item.addSubItem(vLevel2Item);
-            }
-            vList.add(vLevel1Item);
-        }*/
-        List<MultiItemType> vList = initFirstDay();
-        return vList;
     }
 
-    private List<MultiItemType> initFirstDay() {
-        ArrayList<MultiItemType> vList = new ArrayList<>();
-        Level1Item vLevel1Item = new Level1Item("Android四大组件", "subTitle of");
+    private void initFirstDay() {
 
-        Level2Item vLevel2Item1 = new Level2Item("Activity", "");
+        Level1Item vLevel1Item = new Level1Item(AppUtils.getString(R.string.android_about));
+
+        Level2Item vLevel2Item1 = addItemNo1();
         vLevel1Item.addSubItem(vLevel2Item1);
 
-        Level2Item vLevel2Item2 = new Level2Item("Service(服务)", "");
+        Level2Item vLevel2Item2 = new Level2Item(AppUtils.getString(R.string.service_about));
         vLevel1Item.addSubItem(vLevel2Item2);
 
-        Level2Item vLevel2Item3 = new Level2Item("Content Provider(内容提供者)", "");
+        Level2Item vLevel2Item3 = new Level2Item(AppUtils.getString(R.string.content_provider_about));
         vLevel1Item.addSubItem(vLevel2Item3);
 
-        Level2Item vLevel2Item4 = new Level2Item("Broadcast Receiver(广播接受者)", "");
+        Level2Item vLevel2Item4 = new Level2Item(AppUtils.getString(R.string.broadcast_receiver_about));
         vLevel1Item.addSubItem(vLevel2Item4);
-        vList.add(vLevel1Item);
-        return vList;
+        mList.add(vLevel1Item);
+    }
+
+    private Level2Item addItemNo1() {
+        Level2Item vLevel2Item1 = new Level2Item(AppUtils.getString(R.string.activity_about));
+        Level3Item level3Item1 = new Level3Item(AppUtils.getString(R.string.activity_life_cycle), R.string.life_cycle);
+        vLevel2Item1.addSubItem(level3Item1);
+        return vLevel2Item1;
     }
 }

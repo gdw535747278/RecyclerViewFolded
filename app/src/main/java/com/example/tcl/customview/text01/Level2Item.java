@@ -14,6 +14,10 @@ public class Level2Item extends AbstractExpandableItem<Level3Item> implements Mu
         mSubTitle = pSubTitle;
     }
 
+    public Level2Item(String title) {
+        this(title, null);
+    }
+
     @Override
     public int getItemType() {
         return Constants.TYPE_LEVEL_2;

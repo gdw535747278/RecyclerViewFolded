@@ -1,11 +1,13 @@
 package com.example.tcl.customview.text01;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.tcl.customview.R;
+import com.example.tcl.customview.ShowActivity;
 
 import java.util.List;
 
@@ -16,9 +18,11 @@ import java.util.List;
 public class MyRecyclerViewAdapter extends BaseRecyclerViewAdapter<MultiItemType, MyRecyclerViewHolder> {
 
     public LayoutInflater mInflater;
+    private Context mContext;
 
     public MyRecyclerViewAdapter(Context pContext, List<MultiItemType> pList) {
         super(pList);
+        mContext = pContext;
         mInflater = LayoutInflater.from(pContext);
     }
 
@@ -81,13 +85,16 @@ public class MyRecyclerViewAdapter extends BaseRecyclerViewAdapter<MultiItemType
                 });
                 break;
             case Constants.TYPE_LEVEL_3:
-                Level3Item vLevel3Item = (Level3Item) item;
+                final Level3Item vLevel3Item = (Level3Item) item;
                 pHolder.mTextView.setText(vLevel3Item.name);
                 pHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         int vPosition = pHolder.getAdapterPosition();
-
+                        Intent intent = new Intent(mContext, ShowActivity.class);
+                        intent.putExtra(Constants.DETAIL, vLevel3Item.resId);
+                        intent.putExtra(Constants.TYPE, vLevel3Item.name);
+                        mContext.startActivity(intent);
                     }
                 });
                 break;

@@ -6,13 +6,13 @@ package com.example.tcl.customview.text01;
 
 public class Level3Item implements MultiItemType {
 
-    public Level3Item(String pName, int pAge) {
-        name = pName;
-        age = pAge;
+    public Level3Item(String name, int resId) {
+        this.name = name;
+        this.resId = resId;
     }
 
     public String name;
-    public int age;
+    public int resId;
 
 
     @Override
