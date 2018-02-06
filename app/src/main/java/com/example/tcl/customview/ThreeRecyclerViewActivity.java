@@ -59,6 +59,7 @@ public class ThreeRecyclerViewActivity extends BaseActivity {
             }
         });
         mRecyclerView.setLayoutManager(vLayoutManager);
+
         mRecyclerView.setAdapter(mAdapter);
     }
 
