@@ -8,8 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import com.example.bindviewtool.BindView;
 import com.example.bindviewtool.BindViewUtility;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
+    public ArrayList<MyBean> mList;
     @BindView(R.id.rl_001)
     RecyclerView mRecyclerView;
 
@@ -19,9 +22,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BindViewUtility.bind(this);
 
+        mList = new ArrayList<>();
+
+        initData();
 //        mRecyclerView.setLayoutManager(new GridLayoutManager(this,3));
         mRecyclerView.setLayoutManager(new MyLinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL,false));
         mRecyclerView.addItemDecoration(new MyItemDecoration(this,MyItemDecoration.VERTICAL_LIST,R.drawable.recyclerview_line));
-        mRecyclerView.setAdapter(new MyAdapter());
+        mRecyclerView.setAdapter(new MyAdapter(this,mList));
+    }
+
+    private void initData() {
+        mList.add(new MyBean("弹窗1", 001));
     }
 }
