@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.text12.ADManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +23,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     private ArrayList<MyBean> mList = new ArrayList<>();
     private String TAG = "MyAdapter";
     public ArrayList<String> mName;
-    private final Context mContext;
+    private Context mContext;
 
     public MyAdapter(Context context, ArrayList<MyBean> list) {
         this.mContext = context;
@@ -50,19 +52,34 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Log.i(TAG, "onBindViewHolder: ========");
         MyBean myBean = mList.get(position);
-
+        holder.mTextView.setText(myBean.getTitle());
         switch (myBean.getType()) {
             case 001:
-                holder.mTextView.setText(myBean.getTitle());
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(mContext, "点击了"+holder.mTextView.getText(), Toast.LENGTH_SHORT).show();
                         initData();
+                        MainActivity activity = (MainActivity) mContext;
+                        new MultiSelectPopWindow.Builder(activity)
+                                .setNameArray(mName)
+                                .setConfirmListener(new MultiSelectPopWindow.OnConfirmClickListener() {
+                                    @Override
+                                    public void onClick() {
 
+                                    }
+                                })
+                                .setCancle("取消")
+                                .setConfirm("完成")
+                                .setTitle("列表")
+                                .build()
+                                .show(activity.findViewById(R.id.bottom001));
 
                     }
                 });
+                break;
+            case 002:
+                new ADManager(mContext).showAdDialog();
                 break;
         }
 

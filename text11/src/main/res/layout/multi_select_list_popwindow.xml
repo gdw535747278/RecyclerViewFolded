@@ -25,9 +25,10 @@
             android:text="取消"
             android:textSize="16sp"
             android:textColor="#289fff"
+            android:gravity="center"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"/>
         <RelativeLayout
             android:id="@+id/titleLayout"
             android:layout_width="90dp"
@@ -51,7 +52,7 @@
                 android:visibility="gone"
                 android:gravity="center"
                 android:textColor="@android:color/white"
-                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/title"
                 android:layout_marginTop="4dp"
                 android:layout_alignParentTop="true"/>
         </RelativeLayout>
@@ -60,13 +61,14 @@
             android:text="完成"
             android:textSize="16sp"
             android:textColor="#289fff"
+            android:gravity="center"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"/>
         <CheckBox
             android:id="@+id/selectAllBtn"
-            android:text="全选"
+            android:text="点击全选"
             android:textSize="16sp"
             android:textColor="@drawable/select_all_textcolor_selector"
             android:layout_centerVertical="true"
@@ -75,7 +77,7 @@
             android:layout_toLeftOf="@+id/confirmBtn"
             android:layout_marginRight="16dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"/>
     </RelativeLayout>
     <View
         android:background="#dedede"

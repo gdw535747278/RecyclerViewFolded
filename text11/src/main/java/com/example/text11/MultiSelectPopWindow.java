@@ -4,20 +4,23 @@ import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by TCL on 2018/2/7.
  */
 
-public class MultiSelectPopWindow {
+public class MultiSelectPopWindow implements View.OnClickListener {
 
     private TextView selectedNumberTV;
     private TextView cancelBtn;
@@ -25,9 +28,10 @@ public class MultiSelectPopWindow {
     private TextView titleTV;
     private CheckBox selectAllBtn;
     private Builder mBuilder;
+    public MultiSelectListAdapter mAdapter;
     public final PopupWindow mPopupWindow;
 
-    private MultiSelectPopWindow(Builder builder) {
+    public MultiSelectPopWindow(Builder builder) {
         this.mBuilder = builder;
 
         View view = LayoutInflater.from(mBuilder.mActivity).inflate(R.layout.multi_select_list_popwindow, null, false);
@@ -41,6 +45,41 @@ public class MultiSelectPopWindow {
         mPopupWindow.setOutsideTouchable(mBuilder.isOutSideTouchable);
         initView(mPopupWindow.getContentView());
 
+        initListener();
+    }
+
+    private void initListener() {
+        mPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                backgroundAlpah(1.0f);
+            }
+        });
+        selectAllBtn.setOnClickListener(this);
+        cancelBtn.setOnClickListener(this);
+        confirmBtn.setOnClickListener(this);
+
+        mAdapter.addOnSelectChangeListener(new MultiSelectListAdapter.OnSelectChangeListener() {
+            @Override
+            public void changed(ArrayList<Integer> selectPosition, int selectNumber) {
+                if (selectNumber == 0) {
+                    cancelAll();
+
+                } else if (selectNumber == mAdapter.getItemCount()) {
+                    selectAll();
+                }
+                changeSelentNum(selectNumber);
+            }
+        });
+    }
+
+    private void changeSelentNum(int selectNumber) {
+        if (selectNumber > 0) {
+            selectedNumberTV.setVisibility(View.VISIBLE);
+        }else{
+            selectedNumberTV.setVisibility(View.GONE);
+        }
+        selectedNumberTV.setText("" + selectNumber);
     }
 
     private void initView(View contentView) {
@@ -56,7 +95,8 @@ public class MultiSelectPopWindow {
 
         RecyclerView recyclerView = mPopupWindow.getContentView().findViewById(R.id.mRecycleView);
         recyclerView.setLayoutManager(new LinearLayoutManager(mBuilder.mActivity, LinearLayoutManager.VERTICAL, false));
-
+        mAdapter = new MultiSelectListAdapter(mBuilder.mActivity,mBuilder.mNameList);
+        recyclerView.setAdapter(mAdapter);
     }
 
     private void setTextView(TextView view, String text, int color) {
@@ -72,6 +112,59 @@ public class MultiSelectPopWindow {
 
     private void setTextView(TextView view, String text) {
         setTextView(view, text, 0);
+    }
+
+    public void show(View view) {
+        if (mPopupWindow != null) {
+            backgroundAlpah(0.8f);
+            mPopupWindow.showAtLocation(view, Gravity.BOTTOM,0, 0);
+        }
+    }
+
+    private void backgroundAlpah(float v) {
+        try {
+            WindowManager.LayoutParams params = mBuilder.mActivity.getWindow().getAttributes();
+            params.alpha = v;
+            mBuilder.mActivity.getWindow().setAttributes(params);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.selectAllBtn:
+                if (selectAllBtn.isChecked()) {
+                    selectAll();
+
+                } else {
+                    cancelAll();
+                }
+                break;
+            case R.id.cancelBtn:
+                mPopupWindow.dismiss();
+                break;
+            case R.id.confirmBtn:
+                Toast.makeText(mBuilder.mActivity, "选择了"+mAdapter.getSelectNumber()+"条", Toast.LENGTH_SHORT).show();
+                mPopupWindow.dismiss();
+                break;
+        }
+    }
+
+    private void cancelAll() {
+        mAdapter.cancelAll();
+        changeSelentNum(0);
+        selectAllBtn.setChecked(false);
+        selectAllBtn.setText("点击全选");
+    }
+
+    private void selectAll() {
+        mAdapter.selectAll();
+        changeSelentNum(mAdapter.getItemCount());
+        selectAllBtn.setChecked(true);
+        selectAllBtn.setText("取消全选");
     }
 
     public interface OnConfirmClickListener {

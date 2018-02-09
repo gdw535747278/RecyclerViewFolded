@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.rl_001)
     RecyclerView mRecyclerView;
 
+  /*  @BindView(R.id.bottom001)
+    public View mView;*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         mList.add(new MyBean("弹窗1", 001));
+        mList.add(new MyBean("弹窗2", 002));
     }
 }
